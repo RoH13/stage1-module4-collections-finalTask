@@ -19,11 +19,11 @@ public class DeveloperProjectFinder {
         Collections.sort(res, new Comparator<String>() {
             @Override
             public int compare(String str1, String str2) {
-                int lengthcompare = Integer.compare(str1.length(), str2.length());
+                int lengthcompare = Integer.compare(str2.length(), str1.length());
                 if (lengthcompare != 0) {
                     return lengthcompare;
                 } 
-                return str1.compareTo(str2);
+                return str2.compareTo(str1);
             }
         });
         return res;
